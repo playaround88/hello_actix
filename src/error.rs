@@ -11,7 +11,7 @@ pub enum MyError {
   #[fail(display = "{}", _0)]
   Serde(#[cause] serde_json::Error),
   #[fail(display = "{}", _0)]
-  sql(#[cause] sqlx::Error),
+  Sql(#[cause] sqlx::Error),
 }
 
 impl From<io::Error> for MyError {
@@ -34,7 +34,7 @@ impl From<num::ParseIntError> for MyError {
 
 impl From<sqlx::Error> for MyError {
   fn from(err: sqlx::Error) -> MyError {
-    MyError::sql(err)
+    MyError::Sql(err)
   }
 }
 

@@ -17,3 +17,5 @@ dotenv = "0.15.0"
 futures = "0.3.5"
 lazy_static = "1.4.0"
 failure = "0.1.5"
+log = { version = "0.4.11", features = ["max_level_debug", "release_max_level_warn"] }
+stderrlog = "0.4.3"

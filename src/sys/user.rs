@@ -2,7 +2,6 @@ use super::models::User;
 use crate::{MyError, DBPOOL};
 use actix_web::{web, HttpRequest, HttpResponse, Responder};
 use sqlx::prelude::*;
-use sqlx::sqlite::SqliteRow;
 
 /// route configuration
 pub fn scoped_config(cfg: &mut web::ServiceConfig) {
